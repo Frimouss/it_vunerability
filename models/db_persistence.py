@@ -1,6 +1,6 @@
 import sqlite3
 
-db_link = "../database.sqlite"
+db_link = "database.sqlite"
 
 
 def create_table():

@@ -10,7 +10,16 @@ Lorsque le programme detecte une vulnerabilité supérieur au seuil de tolerence
 
 import services.vulnerability_services as vulnerability_services
 import models.db_persistence as persistence
-
+import schedule
+import time
 if __name__ == '__main__':
+
     persistence.create_table()
-    vulnerability_services.get_all_lib_vulnerability('log4j')
+    schedule.every(10).seconds.do(vulnerability_services.get_all_lib_vulnerability('log4j'))
+    schedule.every(10).minutes.do(vulnerability_services.get_all_lib_vulnerability('numpy'))
+    schedule.every().hour.do(vulnerability_services.get_all_lib_vulnerability('pandas'))
+    schedule.every().day.at("10:30").do(vulnerability_services.get_all_lib_vulnerability('pip'))
+
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
