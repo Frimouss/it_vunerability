@@ -2,7 +2,7 @@
 Lorsque l'on parle d'une CVE, on fait généralement référence à une faille de sécurité à laquelle un identifiant CVE a été attribué.
 
 Le but de ce projet est d'analyser avec un programme qui se lance une fois par jour l'ensemble de vulnerabilités des librairies
-utilisées par un projet IT (java, python etc.), selon un seuil de tolerance definit par les équipe de sécurité.
+utilisées par un projet IT (java, python etc.), selon un seuil de tolerance definit par les équipes de sécurité.
 
 Lorsque le programme detecte une vulnerabilité supérieur au seuil de tolerence recommandé une alerte sous forme de mail est envoyé
 à l'équipe IT en charge du projet
