@@ -40,7 +40,6 @@ def get_all_vulnerability():
 
 
 def get_vulnerability_by_cve_id(cve_id):
-    get_all_vulnerability()
     conn = sqlite3.connect(db_link)
     cursor = conn.cursor()
     query = '''SELECT cve_id, cve_desc, it_team, is_fixed FROM it_team_vulnerability WHERE cve_id = ?'''
